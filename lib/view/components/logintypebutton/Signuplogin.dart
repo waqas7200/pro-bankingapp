@@ -18,6 +18,6 @@ class Signuplogin extends StatelessWidget {
         border: Border.all(width: 0.3),
         color: color,
         ),
-        child: TextButton(onPressed: (){}, child: Center(child: Text(text,style:GoogleFonts.poppins(color: textcolor,fontWeight: fontWeight,fontSize: fontsize),),)));
+        child:  Center(child: Text(text,style:GoogleFonts.poppins(color: textcolor,fontWeight: fontWeight,fontSize: fontsize),),));
   }
 }

@@ -3,6 +3,7 @@ import 'package:bankapp/view/utils/constants/maincolor.dart';
 import 'package:bankapp/view/utils/constants/primary_color.dart';
 import 'package:flutter/material.dart';
 
+import '../../../bottom_navigation_screen/bottom_navigation_bar_screen.dart';
 import '../../../components/heading-text.dart';
 import '../../../components/logintypebutton/Signuplogin.dart';
 import '../../../components/main_text.dart';
@@ -94,7 +95,13 @@ class _SignupScreensState extends State<SignupScreens> {
                   SizedBox(height: 30,),
                   Padding(
                     padding: const EdgeInsets.only(left: 40),
-                    child: Signuplogin(text: 'Sign in', color: Appcolors.primarycolor,),
+                    child: InkWell(
+
+                          onTap: (){Navigator.push(context,
+                              MaterialPageRoute(builder: (context)=>BottomNavigationBarScreen())
+                          );},
+                        child: Signuplogin(text: 'Sign in', color: Appcolors.primarycolor,)
+                    ),
                   ),
               
                   Padding(
