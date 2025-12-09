@@ -3,7 +3,7 @@ import 'package:bankapp/view/utils/constants/maincolor.dart';
 import 'package:bankapp/view/utils/constants/primary_color.dart';
 import 'package:flutter/material.dart';
 
-import '../../../bottom_navigation_screen/bottom_navigation_bar_screen.dart';
+import '../../bottom_navigation_screens/bottom_navigation_bar_screen.dart';
 import '../../../components/heading-text.dart';
 import '../../../components/logintypebutton/Signuplogin.dart';
 import '../../../components/main_text.dart';

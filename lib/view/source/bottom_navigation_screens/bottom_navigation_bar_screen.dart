@@ -1,7 +1,8 @@
 import 'package:bankapp/view/utils/constants/primary_color.dart';
 import 'package:flutter/material.dart';
 
-import '../source/app/view/home_screen/Home_screen.dart';
+import '../app/view/home_screen/Home_screen.dart';
+import '../app/view/search_screen/search_screen.dart';
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});
 
@@ -13,7 +14,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
   int index=0;
   final screens=[
     HomeScreen(),
-    Text('djfccccccccccccccccccccccccchdafj'),
+    SearchScreen(),
     Text('djfhdjkhjklfgfdsddfdgfggggggggggggggggggggggggggggggafj'),
     Text('djfuuuuuuuuuuuuuuuuuuuuhdafj'),
   ];

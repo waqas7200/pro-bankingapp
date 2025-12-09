@@ -1,7 +1,9 @@
+import 'package:bankapp/modules/grid_view_home_screen/grid_view_home_screen.dart';
 import 'package:bankapp/view/utils/constants/primary_color.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../components/simple_text.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -10,6 +12,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Homemodel>data=[
+    Homemodel(image: 'assets/signup/Category.png'),
+    Homemodel(image: 'assets/signup/Category(1).png'),
+    Homemodel(image: 'assets/signup/Category(2).png'),
+    Homemodel(image: 'assets/signup/Category(3).png'),
+    Homemodel(image: 'assets/signup/Category(4).png'),
+    Homemodel(image: 'assets/signup/Category(5).png'),
+    Homemodel(image: 'assets/signup/Category(6).png'),
+    Homemodel(image: 'assets/signup/Category(7).png'),
+    Homemodel(image: 'assets/signup/Category(8).png'),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,11 +63,22 @@ class _HomeScreenState extends State<HomeScreen> {
 
             ),
           ),
-          SizedBox(
-            height: 300,
-            width: double.infinity,
-            child: GridView.builder(
-                gridDelegate: gridDelegate, itemBuilder: itemBuilder),
+          Padding(
+            padding: const EdgeInsets.only(top: 110,left: 50,right: 50),
+            child: SizedBox(
+              height: 350,
+              width: double.infinity,
+              child: GridView.builder(
+                itemCount: 9,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3), itemBuilder: (context,index){
+                    return Container(
+                      height: 20,
+                      width: 30,
+                      decoration: BoxDecoration(image: DecorationImage(image: AssetImage(data[index].image.toString()))),
+                    );
+              }),
+            ),
           )
         ],
       ),

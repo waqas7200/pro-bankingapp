@@ -62,7 +62,8 @@ flutter:
   assets:
      - assets/
      - assets/signup/
-     - assets/signup/change_password/
+
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
