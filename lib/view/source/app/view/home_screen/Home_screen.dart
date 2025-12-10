@@ -2,7 +2,8 @@ import 'package:bankapp/modules/grid_view_home_screen/grid_view_home_screen.dart
 import 'package:bankapp/view/utils/constants/primary_color.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../components/simple_text.dart';
+import '../../../../components/simple_text.dar'
+    't';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
