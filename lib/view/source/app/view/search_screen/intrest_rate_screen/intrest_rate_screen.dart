@@ -55,9 +55,12 @@ class _IntrestRateScreenState extends State<IntrestRateScreen> {
                          height: 35,
                          width: double.infinity,
                          child: ListTile(
-                         leading: Text(data[index].text.toString(),style: TextStyle(fontSize:20),),
-                         title: Text(data[index].distance.toString()),  
-                           trailing: Text(data[index].text.toString()),
+                         leading: Text(data[index].text.toString(),style: TextStyle(fontSize:15),),
+                         title: Padding(
+                           padding: const EdgeInsets.only(left: 80),
+                           child: Text(data[index].distance.toString()),
+                         ),
+                           trailing: Text(data[index].rate.toString()),
                          ),
                        );
                      }),
