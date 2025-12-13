@@ -26,7 +26,7 @@ class _ExchangeMoneyScreenState extends State<ExchangeMoneyScreen> {
               height: 270,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Appcolors.white,
+              
                 image: DecorationImage(image: AssetImage('assets/signup/exchange_money.png'),fit: BoxFit.fill)
               ),
             ),
