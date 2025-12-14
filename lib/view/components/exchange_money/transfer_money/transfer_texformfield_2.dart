@@ -14,8 +14,9 @@ class Transfer_money_2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40,
-      width: 350,
+      width: 360,
       decoration: BoxDecoration(
+        color:Colors.white,
           border: Border.all(width: 0.2),
           borderRadius: BorderRadius.circular(15)
       ),
@@ -24,6 +25,7 @@ class Transfer_money_2 extends StatelessWidget {
         child: TextFormField(
           controller: controller,
           decoration: InputDecoration(
+
               hintText: hinttext,
               hintStyle: TextStyle(color: hintcolor,),
               border: InputBorder.none,

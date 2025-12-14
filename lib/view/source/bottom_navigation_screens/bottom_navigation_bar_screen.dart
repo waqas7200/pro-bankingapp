@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../app/view/home_screen/Home_screen.dart';
 import '../app/view/message_screen/messege_screen.dart';
 import '../app/view/search_screen/search_screen.dart';
+import '../app/view/setting_screen/setting_screen.dart';
 class BottomNavigationBarScreen extends StatefulWidget {
   const BottomNavigationBarScreen({super.key});
 
@@ -17,7 +18,7 @@ class _BottomNavigationBarScreenState extends State<BottomNavigationBarScreen> {
     HomeScreen(),
     SearchScreen(),
     MessegeScreen(),
-    Text('djfuuuuuuuuuuuuuuuuuuuuhdafj'),
+    SettingScreen(),
   ];
   @override
   Widget build(BuildContext context) {

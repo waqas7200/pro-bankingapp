@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../components/simple_text.dart';
 import '../../../../utils/constants/primary_color.dart';
+import 'bank_of_america/bank_of_america.dart';
 class MessegeScreen extends StatefulWidget {
   const MessegeScreen({super.key});
 
@@ -20,43 +21,48 @@ class _MessegeScreenState extends State<MessegeScreen> {
         children: [
           Padding(
           padding: const EdgeInsets.only(top: 10,left: 30),
-          child: Container(
-            height: 70,
-            width: 350,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15),
-            border: Border.all(width: 0.1)
-            ),
-            child: Row(children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: Container(
-                  height: 50,
-                  width: 50,
-                 decoration: BoxDecoration(
-                   color: Appcolors.primarycolor,
-                   image: DecorationImage(image: AssetImage('assets/message_pics/1.png')),
-                   borderRadius: BorderRadius.circular(15)
-                 ),
-                ),
+          child: InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>BankOfAmerica()));
+            },
+            child: Container(
+              height: 70,
+              width: 350,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+              border: Border.all(width: 0.1)
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+              child: Row(children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 10,left: 10),
-                  child: SimpleText(text: 'Bank of America', weight: FontWeight.w600, color: Appcolors.black),
+                  padding: const EdgeInsets.only(left: 10),
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                   decoration: BoxDecoration(
+                     color: Appcolors.primarycolor,
+                     image: DecorationImage(image: AssetImage('assets/message_pics/1.png')),
+                     borderRadius: BorderRadius.circular(15)
+                   ),
+                  ),
                 ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10,left: 10),
+                    child: SimpleText(text: 'Bank of America', weight: FontWeight.w600, color: Appcolors.black),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 5,left: 10),
+                    child: SimpleText(text: 'Bank of America : 256486 is the au...', weight: FontWeight.normal, color: Appcolors.black54),
+                  ),
+                ],),
                 Padding(
-                  padding: const EdgeInsets.only(top: 5,left: 10),
-                  child: SimpleText(text: 'Bank of America : 256486 is the au...', weight: FontWeight.normal, color: Appcolors.black54),
+                  padding: const EdgeInsets.only(left: 6,bottom: 10),
+                  child: SimpleText(text: 'Today', weight: FontWeight.normal, color: Appcolors.black54),
                 ),
               ],),
-              Padding(
-                padding: const EdgeInsets.only(left: 6,bottom: 10),
-                child: SimpleText(text: 'Today', weight: FontWeight.normal, color: Appcolors.black54),
-              ),
-            ],),
+            ),
           ),
         ),
           Padding(
