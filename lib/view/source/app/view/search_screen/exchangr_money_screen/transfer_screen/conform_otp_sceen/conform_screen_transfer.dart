@@ -1,10 +1,12 @@
+import 'package:bankapp/view/source/app/view/search_screen/exchangr_money_screen/transfer_screen/conform_otp_sceen/transfer_money_report/transfer_money_report.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../../components/forget_custom_wegits/send_code_custom_booton.dart';
-import '../../../../../../components/logintypebutton/otp_resend_button.dart';
-import '../../../../../../components/simple_text.dart';
-import '../../../../../../components/text_formfield.dart';
-import '../../../../../../utils/constants/primary_color.dart';
+import '../../../../../../../components/exchange_money/transfer_money/transfer_texformfield_2.dart';
+import '../../../../../../../components/forget_custom_wegits/send_code_custom_booton.dart';
+import '../../../../../../../components/logintypebutton/otp_resend_button.dart';
+import '../../../../../../../components/simple_text.dart';
+import '../../../../../../../components/text_formfield.dart';
+import '../../../../../../../utils/constants/primary_color.dart';
 class ConformScreenTransfer extends StatefulWidget {
   const ConformScreenTransfer({super.key});
 
@@ -18,6 +20,7 @@ TextEditingController phonecontroller=TextEditingController();
 TextEditingController dollercontroller=TextEditingController();
 TextEditingController jimycontroller=TextEditingController();
 TextEditingController doller2controller=TextEditingController();
+TextEditingController otpcontroller=TextEditingController();
 class _ConformScreenTransferState extends State<ConformScreenTransfer> {
   @override
   Widget build(BuildContext context) {
@@ -96,8 +99,8 @@ class _ConformScreenTransferState extends State<ConformScreenTransfer> {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 5,left: 10),
-                  child:SendCodeCustomBooton(text: 'OTP', color:Appcolors.primarycolor ,),
+                  padding: const EdgeInsets.only(left: 10,top: 10),
+                  child: Transfer_money_2(hinttext: 'Enter OTP', controller: otpcontroller,),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 5,left: 10),
@@ -106,6 +109,14 @@ class _ConformScreenTransferState extends State<ConformScreenTransfer> {
 
 
               ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 15,left: 30,bottom: 20),
+              child:InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>TransferMoneyReport()));
+                  },
+                  child: SendCodeCustomBooton(text: 'comform', color:Appcolors.primarycolor ,)),
             ),
           ],
         ),

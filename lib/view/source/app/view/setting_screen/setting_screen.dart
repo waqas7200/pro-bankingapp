@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../components/setting/setting_container.dart';
 import '../../../../components/simple_text.dart';
+import 'app_information/app_information.dart';
+import 'app_information/password_in_setting/password_in_setting.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});
@@ -38,7 +40,11 @@ class _SettingScreenState extends State<SettingScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 120,left: 32),
-                  child: SettingContainer(text: 'Password',icon: Icons.arrow_forward_ios,),
+                  child: InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>PasswordInSetting()));
+                      },
+                      child: SettingContainer(text: 'Password',icon: Icons.arrow_forward_ios,)),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top:10,left: 32),
@@ -50,7 +56,11 @@ class _SettingScreenState extends State<SettingScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 10,left: 32),
-                  child: SettingContainer(text: 'App information',icon: Icons.arrow_forward_ios,),
+                  child: InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>AppInformation()));
+                      },
+                      child: SettingContainer(text: 'App information',icon: Icons.arrow_forward_ios,)),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 10,left: 32),

@@ -7,7 +7,7 @@ import '../../../../../../components/forget_custom_wegits/send_code_custom_booto
 import '../../../../../../components/simple_text.dart';
 import '../../../../../../components/text_formfield.dart';
 import '../../../../../../utils/constants/primary_color.dart';
-import 'conform_screen_transfer.dart';
+import 'conform_otp_sceen/conform_screen_transfer.dart';
 class TransferMoneyScreen extends StatefulWidget {
   const TransferMoneyScreen({super.key});
 
