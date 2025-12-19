@@ -1,4 +1,5 @@
-import 'package:bankapp/view/source/app/view/search_screen/exchangr_money_screen/transfer_screen/conform_otp_sceen/transfer_money_report/transfer_money_report.dart';
+
+import 'package:bankapp/view/source/app/view/search_screen/exchangr_money_screen/transfer_screen/conform_otp_sceen/transfer_money_report/transfer_money_report_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../../components/exchange_money/transfer_money/transfer_texformfield_2.dart';
@@ -114,7 +115,7 @@ class _ConformScreenTransferState extends State<ConformScreenTransfer> {
               padding: const EdgeInsets.only(top: 15,left: 30,bottom: 20),
               child:InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>TransferMoneyReport()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>TransferMoneyReportScreen()));
                   },
                   child: SendCodeCustomBooton(text: 'comform', color:Appcolors.primarycolor ,)),
             ),

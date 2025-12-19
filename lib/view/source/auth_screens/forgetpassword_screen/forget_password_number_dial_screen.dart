@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 
 import '../../../components/forget_custom_wegits/send_code_custom_booton.dart';
 import '../../../components/logintypebutton/Signuplogin.dart';

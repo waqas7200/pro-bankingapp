@@ -8,5 +8,6 @@ class  Appcolors
   static Color stackcontainercolor=Colors.white;
   static Color white=Colors.white;
   static Color grey=Colors.grey;
+  static Color grey1=Colors.grey.shade200;
   static Color black=Colors.black;
 }

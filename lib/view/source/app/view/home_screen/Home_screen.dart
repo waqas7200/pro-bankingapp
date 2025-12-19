@@ -1,9 +1,12 @@
 import 'package:bankapp/modules/grid_view_home_screen/grid_view_home_screen.dart';
+import 'package:bankapp/view/source/app/view/home_screen/withdraw_screen/withdraw_screen.dart';
 import 'package:bankapp/view/utils/constants/primary_color.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../components/simple_text.dar'
     't';
+import '../search_screen/exchangr_money_screen/transfer_screen/conform_otp_sceen/transfer_money_report/transfer_money_report_screen.dart';
+import 'acount_and_card_screen/acount_and_card_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -73,10 +76,30 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemCount: 9,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 3), itemBuilder: (context,index){
-                    return Container(
-                      height: 20,
-                      width: 30,
-                      decoration: BoxDecoration(image: DecorationImage(image: AssetImage(data[index].image.toString()))),
+                    return InkWell(
+                      onTap: (){
+                        if(index==0)
+                          {
+                            Navigator.push(context, MaterialPageRoute(builder: (contex){
+                              return AcountAndCardScreen();
+                            }));
+                          }
+                        else if(index==1)
+                          {
+
+                          }
+                        else if(index==2)
+                        {
+                          Navigator.push(context, MaterialPageRoute(builder: (contex){
+                            return WithdrawScreen();
+                          }));
+                        }
+                      },
+                      child: Container(
+                        height: 20,
+                        width: 30,
+                        decoration: BoxDecoration(image: DecorationImage(image: AssetImage(data[index].image.toString()))),
+                      ),
                     );
               }),
             ),
