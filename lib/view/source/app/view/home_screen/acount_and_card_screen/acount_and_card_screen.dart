@@ -11,7 +11,9 @@ class AcountAndCardScreen extends StatefulWidget {
 }
 
 class _AcountAndCardScreenState extends State<AcountAndCardScreen> {
-  bool iscolor=false;
+  bool iscolor=true;
+  bool isbuton=true;
+  bool isAccount=true;
 
   @override
   Widget build(BuildContext context) {
@@ -20,21 +22,247 @@ class _AcountAndCardScreenState extends State<AcountAndCardScreen> {
 
         title: SimpleText(text: 'Account and Card',size: 20, weight: FontWeight.w600, color: Appcolors.black,),
       ),
-      body:Row(children: [
+      body:SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(children: [
+        
+        
+              Padding(
+                padding: const EdgeInsets.only(left: 50),
+                child: Container(
+                  height: 40,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    color: iscolor==true?Appcolors.primarycolor :Appcolors.grey1,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: TextButton(onPressed: (){
+                    setState(() {
+                      iscolor=true;
+                      isAccount=true;
+                    });
+                  }, child: Text('Acount',style:
+                  TextStyle(color: iscolor==true?Appcolors.white :Appcolors.black,fontSize: 18),)),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10),
+                child: Container(
+                  height: 40,
+                  width: 150,
+                  decoration: BoxDecoration(
+                      color: iscolor==true?Appcolors.grey1 :Appcolors.primarycolor,
+                      borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: TextButton(onPressed: (){
+                    setState(() {
+                      iscolor=false;
+                      isAccount=false;
+                    });
+                  }, child: Text('Card',style:
+                  TextStyle(color: iscolor==true?Appcolors.black :Appcolors.white,fontSize: 18),)),
+                ),
+              ),
+        
+            ],),
+            SizedBox(
+              height: 400,
+              child: PageView(
+                children: [
+                isAccount==true?  Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                     Padding(
+                       padding: const EdgeInsets.only(left: 180,top: 10),
+                       child: CircleAvatar(radius: 40,
+                         backgroundImage:AssetImage('assets/signup/mypiic.jpg') ,
+                       ),
+                     ),
+                     Padding(
+                       padding: const EdgeInsets.only(left: 180,top: 10),
+                       child:SimpleText(text: 'waqas khan', weight: FontWeight.w600, color: Appcolors.primarycolor)
+                     ),
+                     Padding(
+                       padding: const EdgeInsets.only(left: 30,right: 30,top:10),
+                       child: Container(
+                         height: 80,
+                         decoration: BoxDecoration(
+                           borderRadius: BorderRadius.circular(10),
+                           border: Border.all(width:1,color: Appcolors.grey1)
+                         ),child: Column(
+                         children: [
+                           Padding(
+                             padding: const EdgeInsets.only(left:20,right:20,top:10),
+                             child: Row(
+                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                               children: [
+                               SimpleText(text: 'Account 1', weight: FontWeight.w600, color: Appcolors.black),
+                               SimpleText(text: '1900 8988 1234', weight: FontWeight.w600, color: Appcolors.black),
+                             ],),
+                           ),
+                           Padding(
+                             padding: const EdgeInsets.only(left:20,right:20),
+                             child: Row(
+                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                               children: [
+                                 SimpleText(text: 'Avalable balance', weight: FontWeight.normal, color: Appcolors.black),
+                                 SimpleText(text: '\$20,000', weight: FontWeight.normal, color: Appcolors.primarycolor),
+                               ],),
+                           ),
+                           Padding(
+                             padding: const EdgeInsets.only(left:20,right:20),
+                             child: Row(
+                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                               children: [
+                                 SimpleText(text: 'Branch', weight: FontWeight.normal, color: Appcolors.black),
+                                 SimpleText(text: 'New York', weight: FontWeight.normal, color: Appcolors.primarycolor),
+                               ],),
+                           ),
+        
+        
+                         ],
+                       ),
+                       ),
+                     ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30,right: 30,top:10),
+                        child: Container(
+                          height: 80,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(width:1,color: Appcolors.grey1)
+                          ),child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left:20,right:20,top:10),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SimpleText(text: 'Account 2', weight: FontWeight.w600, color: Appcolors.black),
+                                  SimpleText(text: '1945 8462 1934', weight: FontWeight.w600, color: Appcolors.black),
+                                ],),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left:20,right:20),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SimpleText(text: 'Avalable balance', weight: FontWeight.normal, color: Appcolors.black),
+                                  SimpleText(text: '\$15,000', weight: FontWeight.normal, color: Appcolors.primarycolor),
+                                ],),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left:20,right:20),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SimpleText(text: 'Branch', weight: FontWeight.normal, color: Appcolors.black),
+                                  SimpleText(text: 'New York', weight: FontWeight.normal, color: Appcolors.primarycolor),
+                                ],),
+                            ),
+        
+        
+                          ],
+                        ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30,right: 30,top:10),
+                        child: Container(
+                          height: 80,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(width:1,color: Appcolors.grey1)
+                          ),child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left:20,right:20,top:10),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SimpleText(text: 'Account 3', weight: FontWeight.w600, color: Appcolors.black),
+                                  SimpleText(text: '1400 8385 4204', weight: FontWeight.w600, color: Appcolors.black),
+                                ],),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left:20,right:20),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SimpleText(text: 'Avalable balance', weight: FontWeight.normal, color: Appcolors.black),
+                                  SimpleText(text: '\$230,000', weight: FontWeight.normal, color: Appcolors.primarycolor),
+                                ],),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(left:20,right:20),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  SimpleText(text: 'Branch', weight: FontWeight.normal, color: Appcolors.black),
+                                  SimpleText(text: 'New York', weight: FontWeight.normal, color: Appcolors.primarycolor),
+                                ],),
+                            ),
+        
+        
+                          ],
+                        ),
+                        ),
+                      )
+                    ],
+                  )
+                    : SingleChildScrollView(
+                      child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20,right: 30,top: 10),
+                          child: Container(
+                            height: 250,
+                            width: 400,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(image: AssetImage('assets/message_pics/card1.png'),fit:BoxFit.fitWidth)
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20,right: 30,top: 0),
+                          child: Container(
+                            height: 250,
+                            width: 400,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(image: AssetImage('assets/message_pics/card2.png'),fit:BoxFit.fitWidth)
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: (){
+                          if(isbuton==false){
+                            isbuton=true;
+                            setState(() {
 
-        InkWell(
-          child:
-         iscolor==true? AccountAndCardCustomButtonTypeContainer(text: 'Account', colortext: iscolor==true?Appcolors.white:Appcolors.black,
-            colorcontainer: iscolor==true?Appcolors.primarycolor:Appcolors.grey1, height: 30, width: 150,)
-          :AccountAndCardCustomButtonTypeContainer(text: 'Account', colortext: iscolor==true?Appcolors.white:Appcolors.black,
-            colorcontainer: iscolor==true?Appcolors.primarycolor:Appcolors.grey1, height: 30, width: 150,),
+                            });
+                          }
+                          else{
+                            isbuton==false;
+                            setState(() {
 
+                            });
+                          }
+                          },
+                          child: AccountAndCardCustomButtonTypeContainer(text: 'Add card', colortext:isbuton==false?Appcolors.black:Appcolors.white,
+                            colorcontainer: isbuton==false?Appcolors.grey1:Appcolors.primarycolor, height:40, width: 150,),
+                        )
+        
+                      ],
+                                      ),
+                    ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
 
-        )
-
-
-
-      ],)
 
     );
   }
