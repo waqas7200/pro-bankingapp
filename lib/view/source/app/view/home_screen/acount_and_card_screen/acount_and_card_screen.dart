@@ -3,6 +3,7 @@ import 'package:bankapp/view/utils/constants/primary_color.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../components/home_screen/account_and_card_custon_button_type_container/account_and_card_custom_button_type_container.dart';
+import 'card/card_scren.dart';
 class AcountAndCardScreen extends StatefulWidget {
   const AcountAndCardScreen({super.key});
 
@@ -236,22 +237,12 @@ class _AcountAndCardScreenState extends State<AcountAndCardScreen> {
                         ),
                         InkWell(
                           onTap: (){
-                          if(isbuton==false){
-                            isbuton=true;
-                            setState(() {
-
-                            });
-                          }
-                          else{
-                            isbuton==false;
-                            setState(() {
-
-                            });
-                          }
+                            Navigator.push(context, MaterialPageRoute(builder: (contex)=>CardScren()));
                           },
-                          child: AccountAndCardCustomButtonTypeContainer(text: 'Add card', colortext:isbuton==false?Appcolors.black:Appcolors.white,
+                          child:
+                         AccountAndCardCustomButtonTypeContainer(text: 'Add card', colortext:isbuton==false?Appcolors.black:Appcolors.white,
                             colorcontainer: isbuton==false?Appcolors.grey1:Appcolors.primarycolor, height:40, width: 150,),
-                        )
+                        ),
         
                       ],
                                       ),
